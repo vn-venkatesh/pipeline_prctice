@@ -13,7 +13,7 @@ pipeline{
             }
         }
 
-        stage(push image to docker hub){
+        stage("push image to docker hub"){
             steps{
                 withCredentials([string(credentialsId: 'dockehub_password', variable: 'dockerhub_pwd')]) {
                     sh "docker login -u vnagavenkatesh503@gmail.com -p ${dockerhub_pwd}"
