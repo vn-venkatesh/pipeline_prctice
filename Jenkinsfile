@@ -1,4 +1,3 @@
-CurrentBuild.displayNamee = "my_first_pipeline_#"+CurrentBuild.number
 pipeline{
     agent any
 
