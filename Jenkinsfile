@@ -1,4 +1,3 @@
-###jenkinsfile for building docker image  with commited id ref
 CurrentBuild.displayNamee = "my_first_pipeline_#"+CurrentBuild.number
 pipeline{
     agent any
