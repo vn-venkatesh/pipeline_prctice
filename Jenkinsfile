@@ -16,7 +16,7 @@ pipeline{
         stag(push image to docker hub){
             steps{
                 withCredentials([string(credentialsId: 'dockehub_password', variable: 'dockerhub_pwd')]) {
-                    sh "docker login -u venkat -p ${dockerhub_pwd}"
+                    sh "docker login -u vnagavenkatesh503@gmail.com -p ${dockerhub_pwd}"
                     sh "docker push venkatesh/nodeapp:${DOCKER_TAG}"
                 }
                 
