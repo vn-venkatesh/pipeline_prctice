@@ -1,6 +1,5 @@
 pipeline{
     agent any
-
     environment {
         DOCKER_TAG = getDockerTag{}
     }
@@ -11,8 +10,6 @@ pipeline{
                 sh "docker build . -t venkatesh/nodeapp:${DOCKER_TAG}"
             }
         }
-
-        
     }
 }
 
