@@ -13,7 +13,7 @@ pipeline{
         }
         stage("running docker image"){
             steps{
-                sh "docker run -itd alpine /bin/bash/"
+                sh "docker run -itd alpine"
             }
         }
     }
