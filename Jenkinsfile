@@ -19,7 +19,7 @@ pipeline{
         stage("push umage to dockerhub"){
             steps{
                 withCredentials([string(credentialsId: 'dockehub_password', variable: 'dockerhub_pwd')]) {
-                    sh "docker login -u vnagavenkatesh503@gmail.com ip ${dockerhub_pwd}"
+                    sh "docker login -u vnagavenkatesh503@gmail.com ip ${'dockerhub_pwd'}"
                     sh "docker push alpine"
                 }
             }
