@@ -8,12 +8,12 @@ pipeline{
         }
         stage("building docker image"){
             steps{
-                sh "docker build -t myfirstimage:v1 ."
+                sh "docker pull alpine"
             }
         }
         stage("running docker image"){
             steps{
-                sh "docker run -itd myfirstimage"
+                sh "docker run -itd alpine /bin/bash/"
             }
         }
     }
