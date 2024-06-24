@@ -3,17 +3,17 @@ pipeline{
     stages{
         stage("welcome"){
             steps{
-                echo "welcome to my pipeline"
+                echo "welcome to my pipeline, Exicution started"
             }
         }
-        stage("1st step"){
+        stage("building docker image"){
             steps{
-                echo "1st step completed"
+                sh "docker build -t myfirstimage:v1 ."
             }
         }
-        stage("2nd step"){
+        stage("running docker image"){
             steps{
-                echo "2nd step completed"
+                sh "docker run -itd myfirstimage"
             }
         }
     }
